@@ -13,6 +13,16 @@ import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
 
 import org.xml.sax.SAXException;
+import org.xml.sax.SAXParseException;
+import javax.xml.XMLConstants;
+import javax.xml.transform.stream.StreamSource;
+import javax.xml.validation.Schema;
+import javax.xml.validation.SchemaFactory;
+import javax.xml.validation.Validator;
+import java.io.IOException;
+import java.io.StringReader;
+
+import org.xml.sax.SAXException;
 
 /**
  * @author jserrape
@@ -34,7 +44,8 @@ public class Validate {
 
 		System.out.println("XML path:".concat(XMLpath));
 		System.out.println("XSD path:".concat(XSDpath));
-
+		System.out.println("");
+		
 		try {
 			SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
 			Schema schema = factory.newSchema(new File(XSDpath));
@@ -42,10 +53,20 @@ public class Validate {
 			validator.validate(new StreamSource(new File(XMLpath)));
 		} catch (IOException e) {
 			LOGGER.log(Level.SEVERE, "Exception: " + e.getMessage());
-		} catch (SAXException e1) {
-			LOGGER.log(Level.SEVERE, "SAX Exception: " + e1.getMessage());
+		} catch (SAXParseException e) {
+            int line = e.getLineNumber();
+            int col = e.getColumnNumber();
+            String message = e.getMessage();
+            System.out.println("Error when validate XML against XSD Schema\n" +
+                    "line: " + line + "\n" +
+                    "column: " + col + "\n" +
+                    "message: " + message.substring(message.indexOf(":") + 2));
+        } catch (SAXException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		
+		System.out.println("");
 		LOGGER.log(Level.INFO, "Finish ok");
 	}
 

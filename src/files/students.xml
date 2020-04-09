@@ -12,13 +12,13 @@
 		<firstname>Vaneet</firstname>
 		<lastname>Gupta</lastname>
 		<nickname>Vinni</nickname>
-		<marks>95</marks>
+		<marks>9a5</marks>
 	</student>
 
 	<student rollno="593">
 		<firstname>Jasvir</firstname>
 		<lastname>Singh</lastname>
 		<nickname>Jazz</nickname>
-		<marks>90</marks>
+		<marks>9a0</marks>
 	</student>
 </class>
