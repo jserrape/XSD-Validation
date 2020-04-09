@@ -1,0 +1,32 @@
+<?xml version = "1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name='class'>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name='client' type='ClientType' minOccurs='0'
+					maxOccurs='unbounded' />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="ClientType">
+		<xs:sequence>
+			<xs:element name="initialPosition" type="xs:nonNegativeInteger" />
+			<xs:element name="finalPosition" type="xs:nonNegativeInteger" />
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="surnames" type="xs:string" />
+			<xs:element name="gender">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="V|H" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="birthDate" type="xs:date" />
+			<xs:element name="registrationDate" type="xs:dateTime" />
+			<xs:element name="iban" type="xs:string" />
+			<xs:element name="alive" type="xs:boolean" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

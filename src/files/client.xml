@@ -1,0 +1,39 @@
+<?xml version = "1.0"?>
+<class>
+	<client>
+		<initialPosition>0</initialPosition>
+		<finalPosition>10</finalPosition>
+		<name>Juan</name>
+		<surnames>Serrano</surnames>
+		<gender>V</gender>
+		<birthDate>2002-09-24</birthDate>
+		<registrationDate>2002-05-30T09:30:10-06:00</registrationDate>
+		<iban>ES6621000418401234567891</iban>
+		<alive>true</alive>
+	</client>
+
+	<client>
+		<initialPosition>-1</initialPosition>
+		<finalPosition>10</finalPosition>
+		<name>Usu2</name>
+		<surnames>ape2</surnames>
+		<gender></gender>
+		<birthDate>2002-09-24</birthDate>
+		<registrationDate>2002-05-30</registrationDate>
+		<iban>ES6621000418401234567891</iban>
+		<alive>true</alive>
+	</client>
+
+	<client>
+		<initialPosition>0</initialPosition>
+		<finalPosition>10</finalPosition>
+		<name>Usu3</name>
+		<surnames>ap3</surnames>
+		<gender>V</gender>
+		<birthDate>2002-09-24</birthDate>
+		<registrationDate>2002-05-30T09:30:10-06:00</registrationDate>
+		<iban>ES6621000418401234567891</iban>
+		<alive>no</alive>
+	</client>
+
+</class>

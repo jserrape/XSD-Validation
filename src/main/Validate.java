@@ -32,9 +32,13 @@ public class Validate {
 
 	private final static Logger LOGGER = Logger.getLogger("bitacora.subnivel.Control");
 
-	// Imput files
-	private final static String XSDpath = "C:/Users/jserrape/Documents/GitHub/XSD-Validation/src/files/students.xsd";
-	private final static String XMLpath = "C:/Users/jserrape/Documents/GitHub/XSD-Validation/src/files/students.xml";
+	// Input files 1
+	// private final static String XSDpath = "./src/files/students.xsd";
+	// private final static String XMLpath = "./src/files/students.xml";
+
+	// Input files 2
+	private final static String XSDpath = "./src/files/client.xsd";
+	private final static String XMLpath = "./src/files/client.xml";
 
 	/**
 	 * @param args
